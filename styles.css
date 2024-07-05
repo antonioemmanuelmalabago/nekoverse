@@ -5,7 +5,7 @@
 :root {
   --headline-color: white;
   --background-color: #11151c;
-  --text-color: rgba(255, 255, 255, 0.5);
+  --text-color: rgb(255, 255, 255);
 }
 
 html,

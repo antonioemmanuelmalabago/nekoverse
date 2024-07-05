@@ -139,7 +139,7 @@ const material1 = new THREE.MeshStandardMaterial({
 const objloader = new OBJLoader()
 objloader.load('./model/maneki_neko.obj', (object) => {
   object.children[0].material = material1
-  object.scale.setScalar(2.2)
+  object.scale.setScalar(2.3)
   object.position.set(0, 0.2, 0)
   group.add(object)
 })
