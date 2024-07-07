@@ -212,7 +212,7 @@ a {
   height: 42vh;
   width: 40vw;
   margin: 0 1vw;
-  background: linear-gradient(360deg, #ff674d, #c74b9b, #3c5bcc, #2e5a5b);
+  background: linear-gradient(#ff674d, #c74b9b, #3c5bcc, #2e5a5b);
   border-radius: 2vw;
   border: 3px solid black;
 }
