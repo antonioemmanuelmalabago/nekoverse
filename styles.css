@@ -196,22 +196,26 @@ a {
   height: 100vh;
   width: 100vw;
   background: black;
+  overflow-x: scroll;
 }
 
 .phases {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
 }
 
-.phase-one {
+.phase-one,
+.phase-two,
+.phase-three,
+.phase-four {
   display: flex;
   flex-direction: column;
   align-items: left;
   height: 42vh;
   width: 40vw;
-  margin: 0 1vw;
+  margin: 0 5vw;
   background: linear-gradient(#ff674d, #c74b9b, #3c5bcc, #2e5a5b);
   border-radius: 2vw;
   border: 3px solid black;
@@ -227,6 +231,8 @@ a {
   margin: 0 auto;
   text-align: left;
   font-size: 17px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .header h1 {
@@ -274,9 +280,7 @@ a {
   transform: scale(3.5);
 }
 
-.fa-search,
-.fa-users,
-.fa-paint-brush {
+.fa {
   transform: scale(3);
 }
 
