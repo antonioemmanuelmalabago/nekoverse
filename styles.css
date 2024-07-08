@@ -214,7 +214,7 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding-top: 5vh;
+  padding-top: 10vh;
   max-height: 100vh;
 }
 
@@ -227,7 +227,7 @@ a {
   align-items: left;
   height: 42vh;
   width: 40vw;
-  margin-left: 70vw;
+  margin-left: 30vw;
   margin-bottom: 15vh;
   background: linear-gradient(#ff674d, #c74b9b, #3c5bcc, #2e5a5b);
   border-radius: 2vw;
@@ -320,7 +320,7 @@ a {
 }
 
 .backers-container {
-  height: 100vh;
+  height: 150vh;
   width: 100vw;
   background: linear-gradient(360deg, #ff674d, #c74b9b, #3c5bcc, #2e5a5b);
 }

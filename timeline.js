@@ -78,13 +78,13 @@ function addStar() {
 
   const [x, y, z] = Array(3)
     .fill()
-    .map(() => THREE.MathUtils.randFloatSpread(120))
+    .map(() => THREE.MathUtils.randFloatSpread(300))
 
   star.position.set(x, y, z)
   scene2.add(star)
 }
 
-Array(1000).fill().forEach(addStar)
+Array(2500).fill().forEach(addStar)
 
 function createAnimation(mixer, action, clip) {
   let proxy = {
@@ -106,7 +106,6 @@ function createAnimation(mixer, action, clip) {
       pin: true,
       pinSpacing: false, // Prevents additional space when pinned
       scrub: true,
-      markers: true, // Visualize the trigger
     },
   })
 
