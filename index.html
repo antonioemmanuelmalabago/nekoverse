@@ -72,6 +72,10 @@
       </div>
     </div>
 
+    <div class="canvas2-container">
+      <canvas id="canvas2"></canvas>
+    </div>
+
     <div class="timeline-container">
       <div class="phases">
         <div class="phase-one">
@@ -269,10 +273,15 @@
       </div>
     </div>
 
-    <!-- <div class="backers-container"></div> -->
+    <div class="backers-container"></div>
   </body>
   <link rel="stylesheet" href="./styles.css" />
-  <script type="module" src="./index.js"></script>
+  <script type="module" src="./headline.js"></script>
+  <script type="module" src="./timeline.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"

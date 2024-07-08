@@ -20,12 +20,26 @@ body {
   box-sizing: border-box;
 }
 
+canvas {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+}
+
 .canvas-container {
+  max-height: 100vh;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+}
+
+.canvas2-container {
+  position: absolute;
+  top: 250%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 .headline-container {
@@ -66,9 +80,7 @@ body {
 }
 
 #text-front {
-  /*  Set text-color to transparent to only show the outline  */
   color: transparent;
-  text-stroke: 3px var(--headline-color);
   -webkit-text-stroke: 3px var(--headline-color);
   z-index: 3;
 }
@@ -193,17 +205,17 @@ a {
 }
 
 .timeline-container {
-  height: 100vh;
+  max-height: 100vh;
   width: 100vw;
-  background: black;
-  overflow-x: scroll;
+  background: transparent;
 }
 
 .phases {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  padding-top: 5vh;
+  max-height: 100vh;
 }
 
 .phase-one,
@@ -215,10 +227,12 @@ a {
   align-items: left;
   height: 42vh;
   width: 40vw;
-  margin: 0 5vw;
+  margin-left: 70vw;
+  margin-bottom: 15vh;
   background: linear-gradient(#ff674d, #c74b9b, #3c5bcc, #2e5a5b);
   border-radius: 2vw;
   border: 3px solid black;
+  z-index: 2;
 }
 
 .header {
