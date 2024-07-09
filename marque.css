@@ -32,6 +32,7 @@
   height: 100px;
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 12px;
   background-color: black;
   position: absolute;
@@ -75,8 +76,7 @@
 }
 
 img {
-  margin: 25px;
-  width: 100%;
+  width: 80%;
   height: auto;
   filter: invert(100%);
 }
