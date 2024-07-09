@@ -1,0 +1,82 @@
+.wrapper {
+  width: 90%;
+  margin: 5vh 0;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+@keyframes scrollRight {
+  to {
+    right: -200px;
+  }
+}
+
+.logoLeft,
+.logoRight {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  background-color: black;
+  position: absolute;
+  animation-timing-function: linear;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+.logoLeft {
+  left: max(calc(200px * 6), 100%);
+  animation-name: scrollLeft;
+}
+
+.logoRight {
+  right: max(calc(200px * 6), calc(100% + 200px));
+  animation-name: scrollRight;
+}
+
+.logo1 {
+  animation-delay: calc(30s / 6 * (6 - 1) * -1);
+}
+
+.logo2 {
+  animation-delay: calc(30s / 6 * (6 - 2) * -1);
+}
+
+.logo3 {
+  animation-delay: calc(30s / 6 * (6 - 3) * -1);
+}
+
+.logo4 {
+  animation-delay: calc(30s / 6 * (6 - 4) * -1);
+}
+
+.logo5 {
+  animation-delay: calc(30s / 6 * (6 - 5) * -1);
+}
+
+.logo6 {
+  animation-delay: calc(30s / 6 * (6 * 6) * -1);
+}
+
+img {
+  margin: 25px;
+  width: 100%;
+  height: auto;
+  filter: invert(100%);
+}

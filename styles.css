@@ -26,7 +26,7 @@ canvas {
 }
 
 .canvas-container {
-  max-height: 100vh;
+  min-height: 100vh;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -192,6 +192,7 @@ a {
   width: 65%;
   height: auto;
   margin: auto auto 6vh;
+  animation: shadow-animation 2s infinite;
 }
 
 #feature-two-img {
@@ -319,8 +320,13 @@ a {
   text-wrap: wrap;
 }
 
-.backers-container {
-  height: 150vh;
+.partners-container {
+  height: 45vh;
   width: 100vw;
+  padding-top: 35vh;
   background: linear-gradient(360deg, #ff674d, #c74b9b, #3c5bcc, #2e5a5b);
+}
+
+.buy-container {
+  height: 100vh;
 }
