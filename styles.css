@@ -8,6 +8,10 @@
   --text-color: rgb(255, 255, 255);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   margin: 0;
@@ -83,6 +87,13 @@ canvas {
   height: 100%;
   margin-right: 5vw;
   gap: 30px;
+}
+
+.navigation-buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .navigation-buttons a:hover {
@@ -180,7 +191,7 @@ canvas {
 
 .title,
 .subtitle {
-  font-size: 0.6rem;
+  font-size: 12px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
@@ -197,13 +208,13 @@ canvas {
 }
 
 .socials a {
-  margin: 0 5px;
+  margin: 0 8px;
   transition: all 0.5s ease-in-out;
-  transform: scale(1);
+  transform: scale(1.2);
 }
 
 .socials a:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
   filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
 }
 
@@ -269,6 +280,10 @@ a {
   line-height: 1.8;
   letter-spacing: 1px;
   color: rgba(255, 255, 255, 0.75);
+}
+
+#feature-description b {
+  opacity: 1;
 }
 
 #feature-one-img,
@@ -437,10 +452,11 @@ a {
   font-size: 14px;
   font-weight: bold;
   text-align: left;
-  background: linear-gradient(90deg, #ff674d, #c74b9b, #3c5bcc);
+  background: #11151c;
+  border: 1px solid gray;
   border-radius: 20px;
   text-wrap: nowrap;
-  color: white;
+  opacity: 0.7;
 }
 
 #launch-title-placeholder {
@@ -448,18 +464,26 @@ a {
   margin: 20px 0;
   padding: 0;
   font-size: 50px;
-
   text-align: left;
   line-height: 50px;
+  background: linear-gradient(to right, #ff674d, #c74b9b, #3c5bcc);
+  background-clip: text;
+  --webkit-text-fill-color: transparent;
+  --webkit-background-clip: text;
+  color: transparent;
+}
+
+#title-no-gradient {
+  background: none;
+  color: white;
 }
 
 #launch-subtitle-placeholder {
   width: 80%;
   margin: 0 0 20px;
   font-size: 15px;
-
   text-align: justify;
-  opacity: 0.8;
+  opacity: 0.7;
   line-height: 24px;
 }
 
@@ -510,10 +534,10 @@ a {
   background-color: #11151c;
 }
 
-.days,
-.hours,
-.minutes,
-.seconds {
+.days h5,
+.hours h5,
+.minutes h5,
+.seconds h5 {
   opacity: 0.7;
 }
 
@@ -571,6 +595,8 @@ h6 {
   width: 80%;
   background-color: #11151c;
   border-radius: 8px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 #purchased-placeholder,
@@ -604,7 +630,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7%;
+  gap: 5%;
 }
 
 .mvx-currency,
@@ -613,7 +639,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 26%;
+  width: 27%;
   height: 100%;
   color: white;
   background-color: #11151c;
@@ -623,7 +649,7 @@ h6 {
 }
 
 .currency-icon-container {
-  margin-right: 5px;
+  margin-right: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -634,8 +660,18 @@ h6 {
   overflow: hidden;
 }
 
+.mvx-currency p,
+.usdt-currency p,
+.usdc-currency p {
+  margin: 0;
+  padding: 0;
+  width: 45%;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
 .mvx-container {
-  background-color: #11151c;
+  background-color: black;
 }
 
 .usdt-container {
@@ -711,7 +747,14 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
+input[type='number'] {
+  font-size: 18px;
+}
+
 .connect-wallet-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 7vh;
   width: 90%;
   margin: 1vh 0;
@@ -722,4 +765,6 @@ input[type='number'] {
 
 #connect-wallet-placeholder {
   color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
