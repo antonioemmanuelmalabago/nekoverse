@@ -26,9 +26,10 @@ canvas {
 }
 
 .canvas-container {
-  min-height: 100vh;
+  margin-top: 0;
+  height: 100vh;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -42,6 +43,85 @@ canvas {
   z-index: 0;
 }
 
+.header-container {
+  display: flex;
+  height: 10vh;
+  width: 100vw;
+  background-color: #11151c;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 0 5vw;
+}
+
+#logo-image {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+
+#logo-placeholder {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.menu-section {
+  display: flex;
+  justify-content: right;
+  width: 50%;
+}
+
+.navigation-buttons {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 5vw;
+  gap: 30px;
+}
+
+.navigation-buttons a:hover {
+  color: white;
+}
+
+#buy-now-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 104px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid gray;
+  background: #11151c;
+  color: white;
+  cursor: pointer;
+}
+
+#buy-now-button:hover {
+  border: 2px solid white;
+  background: linear-gradient(90deg, #ff674d, #c74b9b, #3c5bcc);
+}
+
+#buy-now-button p {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: bolder;
+  color: white;
+  letter-spacing: 1px;
+}
+
 .headline-container {
   display: flex;
   align-items: center;
@@ -51,6 +131,7 @@ canvas {
   left: 0;
   right: 0;
   bottom: 0;
+  margin-top: 5%;
   pointer-events: none;
 }
 
@@ -106,8 +187,12 @@ canvas {
   font-weight: 500;
 }
 
+.title {
+  margin-top: 10vh;
+}
+
 .subtitle {
-  padding-top: 80vh;
+  margin-top: 70vh;
   padding-bottom: 1vh;
 }
 
@@ -134,10 +219,10 @@ a {
 }
 
 .features-container {
-  margin-top: 100vh;
+  margin-top: 93vh;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(#ff674d, #c74b9b, #3c5bcc, #2e5a5b);
+  background: linear-gradient(#ff674d, #c74b9b, #3c5bcc);
 }
 
 .features {
@@ -230,7 +315,7 @@ a {
   width: 40vw;
   margin-left: 30vw;
   margin-bottom: 15vh;
-  background: linear-gradient(#ff674d, #c74b9b, #3c5bcc, #2e5a5b);
+  background: linear-gradient(#ff674d, #c74b9b, #3c5bcc);
 
   border-radius: 2vw;
 
@@ -334,7 +419,70 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 5vw;
   height: 100vh;
+}
+
+.details-section {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  width: 50vw;
+}
+
+#launch-placeholder {
+  width: 390px;
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  background: linear-gradient(90deg, #ff674d, #c74b9b, #3c5bcc);
+  border-radius: 20px;
+  text-wrap: nowrap;
+  color: white;
+}
+
+#launch-title-placeholder {
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+  font-size: 50px;
+
+  text-align: left;
+  line-height: 50px;
+}
+
+#launch-subtitle-placeholder {
+  width: 80%;
+  margin: 0 0 20px;
+  font-size: 15px;
+
+  text-align: justify;
+  opacity: 0.8;
+  line-height: 24px;
+}
+
+.launch-buttons {
+  display: flex;
+  justify-items: left;
+}
+
+.launch-buttons a {
+  width: 100px;
+  margin-right: 20px;
+  padding: 10px;
+  background-color: blue;
+  border: 2px solid black;
+  border-radius: 20px;
+  background: #11151c;
+  border: 2px solid gray;
+  color: white;
+}
+
+.launch-buttons a:hover {
+  border: 2px solid white;
+  background: linear-gradient(90deg, #ff674d, #c74b9b, #3c5bcc);
 }
 
 .buy-section {
@@ -359,7 +507,7 @@ a {
   height: 12vh;
   width: 90%;
   border-radius: 20px;
-  background-color: black;
+  background-color: #11151c;
 }
 
 .days,
@@ -421,7 +569,7 @@ h6 {
 .progress-bar-filled {
   height: 100%;
   width: 80%;
-  background-color: black;
+  background-color: #11151c;
   border-radius: 8px;
 }
 
@@ -452,7 +600,7 @@ h6 {
 
 .currencies {
   width: 100%;
-  height: 5vh;
+  height: 5.5vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -468,10 +616,10 @@ h6 {
   width: 26%;
   height: 100%;
   color: white;
-  background-color: black;
+  background-color: #11151c;
   border-radius: 20px;
   border: none;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .currency-icon-container {
@@ -487,7 +635,7 @@ h6 {
 }
 
 .mvx-container {
-  background-color: #252525;
+  background-color: #11151c;
 }
 
 .usdt-container {
@@ -551,6 +699,7 @@ h6 {
   transform: scale(1.5);
 }
 
+/* Hide spinners */
 input[type='number']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -566,7 +715,7 @@ input[type='number'] {
   height: 7vh;
   width: 90%;
   margin: 1vh 0;
-  background-color: black;
+  background-color: #11151c;
   border: none;
   border-radius: 30px;
 }
