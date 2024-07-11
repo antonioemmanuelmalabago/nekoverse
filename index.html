@@ -318,49 +318,104 @@
 
     <div class="buy-container">
       <div class="buy-section">
-        <h3>NEXT PRICE INCREASE WILL BE</h3>
+        <p id="buy-header">NEXT PRICE INCREASE WILL BE</p>
         <div class="timer">
           <div class="days">
-            <h5>Days</h5>
-            <h2>04</h2>
+            <h5 id="days-placeholder">Days</h5>
+            <h2 id="days-value">04</h2>
           </div>
           <div class="hours">
-            <h5>Hours</h5>
-            <h2>04</h2>
+            <h5 id="hours-placeholder">Hours</h5>
+            <h2 id="hours-value">04</h2>
           </div>
           <div class="minutes">
-            <h5>Minutes</h5>
-            <h2>04</h2>
+            <h5 id="minutes-placeholder">Minutes</h5>
+            <h2 id="minutes-value">04</h2>
           </div>
           <div class="seconds">
-            <h5>Seconds</h5>
-            <h2>04</h2>
+            <h5 id="seconds-placeholder">Seconds</h5>
+            <h2 id="seconds-value">04</h2>
           </div>
         </div>
         <div class="total-raised">
-          <h4>$100,000,000 / $200,000,000</h4>
-          <div class="progress-bar"></div>
-          <h5 class="purchased">YOUR PURCHASED $NEKO: 0</h5>
-          <h5 class="stakeable">YOUR STAKEABLE $NEKO: 0</h5>
+          <div class="cap-progress">
+            <p id="current-cap">$100,000,000</p>
+            <p id="cap-separator">/</p>
+            <p id="max-cap">$200,000,000</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar-filled"></div>
+          </div>
+          <p id="purchased-placeholder">YOUR PURCHASED $NEKO ~0</p>
+          <p id="stakeable-placeholder">YOUR STAKEABLE $NEKO ~0</p>
         </div>
-        <h4 class="token-price">1 $NEKO = $0.05</h4>
+        <div class="token-price">
+          <hr id="token-price-line-left" />
+          <p id="token-price">1 $NEKO = $0.05</p>
+          <hr id="token-price-line-right" />
+        </div>
         <div class="currencies">
-          <div class="mvx-currency"><h4>MVX</h4></div>
-          <div class="usdt-currency"><h4>USDT</h4></div>
-          <div class="card-payment"><h4>CARD</h4></div>
+          <button class="mvx-currency">
+            <div class="currency-icon-container mvx-container">
+              <img
+                id="currency-icon mvx-icon"
+                src="./images/mvx-icon.png"
+                alt=""
+              />
+            </div>
+            <h3>EGLD</h3>
+          </button>
+          <button class="usdt-currency">
+            <div class="currency-icon-container usdt-container">
+              <img id="currency-icon" src="./images/usdt-icon.png" alt="" />
+            </div>
+            <h3>USDT</h3>
+          </button>
+          <button class="usdc-currency">
+            <div class="currency-icon-container usdc-container">
+              <img id="currency-icon" src="./images/usdc-icon.png" alt="" />
+            </div>
+            <h3>USDC</h3>
+          </button>
         </div>
         <div class="purchase-input">
           <div class="selected-currency">
-            <h5>MVX you pay</h5>
-            <div class="selected-currency-box"></div>
+            <p id="purchase-placeholder">You pay</p>
+            <div class="selected-currency-box">
+              <input id="currency-value" type="number" placeholder="1.00" />
+              <div
+                class="currency-icon-container mvx-container"
+                id="selected-currency-icon"
+              >
+                <img
+                  id="currency-icon mvx-icon"
+                  src="./images/mvx-icon.png"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
           <div class="neko-equivalent">
-            <h5>$NEKO you receive</h5>
-            <div class="neko-equivalent-box"></div>
+            <p id="purchase-placeholder">You receive</p>
+
+            <div class="neko-equivalent-box">
+              <input id="neko-value" type="number" placeholder="100000.00" />
+              <div
+                class="currency-icon-container mvx-container"
+                id="selected-currency-icon"
+              >
+                <img
+                  id="currency-icon mvx-icon"
+                  src="./images/paw-icon.png"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
         </div>
-        <button class="connect-wallet-button"><h2>Connect Wallet</h2></button>
-        <h6>Widget powered by Ashswap</h6>
+        <button class="connect-wallet-button">
+          <h2 id="connect-wallet-placeholder">Connect Wallet</h2>
+        </button>
       </div>
     </div>
   </body>
