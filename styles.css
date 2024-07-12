@@ -191,7 +191,7 @@ canvas {
 
 .title,
 .subtitle {
-  font-size: 12px;
+  font-size: 8px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
@@ -422,9 +422,9 @@ a {
 }
 
 .partners-container {
-  height: 45vh;
+  height: 43vh;
   width: 100vw;
-  padding-top: 35vh;
+  padding-top: 30vh;
   background: linear-gradient(360deg, #ff674d, #c74b9b, #3c5bcc, #2e5a5b);
 }
 
@@ -751,6 +751,10 @@ input[type='number'] {
   font-size: 18px;
 }
 
+input[type='number']:focus {
+  outline: none;
+}
+
 .connect-wallet-button {
   display: flex;
   align-items: center;
@@ -767,4 +771,74 @@ input[type='number'] {
   color: white;
   font-size: 18px;
   letter-spacing: 1px;
+}
+
+/* FOOTER CONTAINER */
+
+.footer-container {
+  height: 62vh;
+  width: 100vw;
+  padding-top: 0.5vh;
+  background: linear-gradient(360deg, #ff674d, #c74b9b, #3c5bcc);
+}
+
+.footer-section {
+  display: flex;
+  gap: 5vw;
+  margin: 0 5vw;
+}
+
+.footer-column-one,
+.footer-column-two,
+.footer-column-three {
+  height: 30vh;
+  width: 30vw;
+  justify-content: left;
+}
+
+#logo-placeholder {
+  width: 100%;
+}
+
+#footer-text {
+  display: flex;
+  margin: 0;
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+}
+
+#social-placeholder {
+  width: 100%;
+  text-align: left;
+  margin: 24px 0 22px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#footer-link {
+  margin-right: auto;
+  padding: 0 0 8px;
+  text-decoration: underline;
+  transition: none;
+}
+
+#footer-link:hover {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#copyright-placeholder {
+  width: 100%;
+  text-align: left;
+  margin: 30px 0;
+  font-size: 16px;
 }
