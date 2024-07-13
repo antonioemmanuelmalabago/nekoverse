@@ -1,5 +1,6 @@
+/* MAIN CSS FILE CONFIG */
+/* Import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
@@ -24,6 +25,7 @@ body {
   box-sizing: border-box;
 }
 
+/* Define propoerties for canvas elements */
 canvas {
   width: 100vw;
   height: 100vh;
@@ -47,8 +49,11 @@ canvas {
   z-index: 0;
 }
 
+/* Navigation bar properties */
 .header-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 10vh;
   width: 100vw;
   background-color: #11151c;
@@ -57,6 +62,7 @@ canvas {
 .logo-section {
   display: flex;
   align-items: center;
+  height: 100%;
   width: 50%;
   padding: 0 5vw;
 }
@@ -81,15 +87,18 @@ canvas {
   width: 50%;
 }
 
-.navigation-buttons {
+.navigation-buttons ul {
   display: flex;
   align-items: center;
   height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
   margin-right: 5vw;
   gap: 30px;
+  list-style: none;
 }
 
-.navigation-buttons a {
+.navigation-buttons ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,6 +142,73 @@ canvas {
   letter-spacing: 1px;
 }
 
+/* Navigation bar for smaller devices */
+.menu-section-column {
+  position: absolute;
+  top: 10vh;
+  z-index: 4;
+  display: none;
+}
+
+.navigation-buttons-column {
+  display: none;
+}
+
+.navigation-buttons-column ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-buttons-column ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background: #11151c;
+}
+
+.navigation-buttons-column ul li:hover {
+  background: linear-gradient(90deg, #ff674d, #c74b9b, #3c5bcc);
+}
+
+.navigation-buttons-column ul li a {
+  color: white;
+  width: 100%;
+}
+
+.navigation-buttons-column ul li:last-child {
+  background: linear-gradient(90deg, #ff674d, #c74b9b, #3c5bcc);
+  font-weight: bold;
+}
+
+.expand-navigation-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 5vw;
+  margin-left: auto;
+  display: none;
+  overflow: hidden;
+  transition: none;
+}
+
+#bars-icon {
+  transform: scale(1.5);
+  color: white;
+}
+
+#close-icon {
+  transform: scale(1.7);
+  color: white;
+}
+
+/* HERO SECTION */
 .headline-container {
   display: flex;
   align-items: center;
@@ -152,7 +228,7 @@ canvas {
   font-family: 'Roboto', sans-serif;
   position: absolute;
   text-align: center;
-  font-size: clamp(24px, 20vw, 200px);
+  font-size: clamp(24px, 25vw, 200px);
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 10px;
@@ -229,6 +305,7 @@ a {
   transition: all 0.5s ease-in-out;
 }
 
+/* FEATURES SECTION */
 .features-container {
   margin-top: 93vh;
   height: 100vh;
@@ -305,6 +382,7 @@ a {
   margin-bottom: 4vh;
 }
 
+/* ROADMAP SECTION */
 .timeline-container {
   max-height: 100vh;
   width: 100vw;
@@ -373,6 +451,7 @@ a {
   height: 9vh;
 }
 
+/* Keyframe for shadow animation */
 @keyframes shadow-animation {
   0% {
     filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 1));
@@ -428,8 +507,72 @@ a {
   background: linear-gradient(360deg, #ff674d, #c74b9b, #3c5bcc, #2e5a5b);
 }
 
-/* FOR PURCHASE CONTAINER */
+/* RESPONSIVE DESIGN */
+@media (max-width: 475px) {
+  .menu-section {
+    display: none;
+  }
 
+  .navigation-buttons-column {
+    display: block;
+  }
+
+  .expand-navigation-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #bars-icon,
+  #close-icon {
+    position: absolute;
+  }
+
+  #close-icon {
+    display: none;
+  }
+  .features-container {
+    margin-top: 90vh;
+    height: 150vh;
+  }
+  .features {
+    height: 100%;
+    transform: scale(0.8);
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  .feature-one,
+  .feature-two,
+  .feature-three {
+    display: flex;
+    flex-direction: start;
+    width: 87vw;
+    height: 58vh;
+    border-radius: 20px;
+  }
+
+  .canvas2-container {
+    top: 353%;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .phases {
+    padding-top: 2vh;
+  }
+
+  .phase-one,
+  .phase-two,
+  .phase-three,
+  .phase-four {
+    transform: scale(0.7);
+  }
+}
+
+/* BUY SECTION */
 .buy-container {
   display: flex;
   align-items: center;
@@ -740,16 +883,16 @@ h6 {
   transform: scale(1.5);
 }
 
-/* Hide spinners */
+/* Hide spinners in Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* Hide spinners in other browsers */
 input[type='number']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-/* Hide spinners in Firefox */
-input[type='number'] {
-  -moz-appearance: textfield;
 }
 
 input[type='number'] {
@@ -783,8 +926,7 @@ input[type='number']:focus {
   letter-spacing: 1px;
 }
 
-/* FOOTER CONTAINER */
-
+/* FOOTER SECTION */
 .footer-container {
   height: 62vh;
   width: 100vw;
