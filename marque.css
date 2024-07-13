@@ -15,6 +15,15 @@
   );
 }
 
+@media (max-width: 475px) {
+  .wrapper {
+    transform: scale(0.9);
+    margin: 3vh;
+    width: 100vw;
+    overflow: visible;
+  }
+}
+
 .brand-wrapper {
   width: 100%;
   background-color: black;
