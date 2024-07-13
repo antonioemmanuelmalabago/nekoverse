@@ -541,7 +541,7 @@ a {
     transform: scale(0.8);
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 4vh;
   }
 
   .feature-one,
@@ -550,7 +550,7 @@ a {
     display: flex;
     flex-direction: start;
     width: 87vw;
-    height: 58vh;
+    height: 60vh;
     border-radius: 20px;
   }
 
