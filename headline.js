@@ -18,37 +18,10 @@ let targetScroll = 0
 let ease = 0.001
 let theta1 = 0
 
-function updateScale() {
-  let rect = canvasRect.getBoundingClientRect()
-  let startScrollPosition = window.pageYOffset + rect.top
-  let endScrollPosition = window.pageYOffset + rect.bottom
-
-  if (
-    targetScroll + window.innerHeight < startScrollPosition ||
-    targetScroll > endScrollPosition
-  ) {
-    return
-  }
-
-  currentScroll += (targetScroll - currentScroll) * ease
-  let scaleValue1 = 1 + currentScroll * parallaxScaling1
-  let scaleValue2 = 1 + currentScroll * parallaxScaling2
-
-  textBehind.style.transform = `scale(${scaleValue1})`
-  textFront.style.transform = `scale(${scaleValue1})`
-  textBehindBlur.style.transform = `scale(${scaleValue1})`
-  canvasRect.style.transform = `scale(${scaleValue2})`
-
-  theta1 += currentScroll * parallaxScaling3
-  setTimeout(updateScale, 1000 / 60)
-}
-
 window.addEventListener('scroll', () => {
   targetScroll = window.pageYOffset
   updateScale()
 })
-
-updateScale()
 
 var renderer = new THREE.WebGLRenderer({
   canvas: document.getElementById('canvas'),

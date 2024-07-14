@@ -955,8 +955,8 @@ input[type='number']:focus {
     display: none;
   }
   .features-container {
-    margin-top: 90vh;
-    height: 155vh;
+    margin-top: 85vh;
+    height: 159vh;
   }
 
   .features {
@@ -984,7 +984,7 @@ input[type='number']:focus {
   }
 
   .phases {
-    padding-top: 2vh;
+    padding-top: 5vh;
   }
 
   .phase-one,
@@ -994,14 +994,14 @@ input[type='number']:focus {
     display: flex;
     flex-direction: column;
     transform: scale(0.8);
-    width: 88vw;
+    width: 80vw;
     height: 64vh;
     border-radius: 20px;
     padding-bottom: 3vh;
   }
 
   .phase-one {
-    margin-left: 6vw;
+    margin-left: 10vw;
   }
 
   .activities {
@@ -1014,12 +1014,17 @@ input[type='number']:focus {
   }
 
   .buy-container {
-    height: 135vh;
+    height: 140vh;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .details-section {
     height: 55vh;
     width: 88vw;
+  }
+  .launch-buttons {
   }
   #launch-placeholder {
     width: 70vw;
@@ -1047,5 +1052,67 @@ input[type='number']:focus {
   .footer-column-two,
   .footer-column-three {
     width: 88vw;
+  }
+}
+
+@media (max-width: 475px) and (max-height: 825px) {
+  body {
+    overflow: hidden;
+  }
+  .headline-container {
+    margin-top: 0;
+  }
+  .canvas-container {
+    height: 100vh;
+  }
+  .features-container {
+    margin-top: 90vh;
+    height: 190vh;
+  }
+  .features {
+    padding-top: 2vh;
+    height: 100%;
+  }
+  .feature-one,
+  .feature-two,
+  .feature-three {
+    height: 80vh;
+    width: 98vw;
+  }
+  .canvas2-container {
+    width: 100vw;
+    margin-top: 35vh;
+  }
+  .phases {
+    margin-top: -15vh;
+  }
+  .phase-one,
+  .phase-two,
+  .phase-three,
+  .phase-four {
+    transform: scale(0.7);
+    width: 44vh;
+    height: 70vh;
+    margin-left: 7vw;
+  }
+  .partners-container {
+    padding-top: 15vh;
+    height: 37vh;
+    margin-top: 6;
+  }
+  .buy-container {
+    height: 160vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 17vh;
+  }
+  .buy-section {
+    height: 70vh;
+    width: 90vw;
+  }
+  .footer-container {
+    height: 100vh;
   }
 }
