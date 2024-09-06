@@ -1,0 +1,31 @@
+.partners-section {
+  display: flex;
+  justify-content: center;
+}
+
+.partners-container {
+  height: 310px;
+  width: 100vw;
+  background: linear-gradient(360deg, #ff674d, #c74b9b, #3c5bcc, #2e5a5b);
+  z-index: 3;
+}
+
+.wrapper.bottom {
+  margin-top: 0;
+}
+
+@media (max-width: 500px) {
+  .partners-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin: 0;
+    padding: auto;
+  }
+  .partner-logo {
+    width: 150px;
+    height: 80px;
+  }
+}

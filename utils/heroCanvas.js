@@ -2,35 +2,17 @@ import * as THREE from 'https://cdn.skypack.dev/three@0.124.0'
 import { RGBELoader } from 'https://cdn.skypack.dev/three@0.124.0/examples/jsm/loaders/RGBELoader.js'
 import { OBJLoader } from 'https://cdn.skypack.dev/three@0.134.0/examples/jsm/loaders/OBJLoader.js'
 
-// Get the elements that will be transformed during scrolling
-const textBehind = document.getElementById('text-behind')
-const textFront = document.getElementById('text-front')
-const textBehindBlur = document.getElementById('text-behind-blur')
-const canvasRect = document.getElementById('canvas')
-
-// Define the increment of scaling
-const parallaxScaling1 = 0.0005
-const parallaxScaling2 = 0.00025
-const parallaxScaling3 = 0.0000001
-
-let currentScroll = 0
-let targetScroll = 0
-let ease = 0.001
 let theta1 = 0
-
-window.addEventListener('scroll', () => {
-  targetScroll = window.pageYOffset
-  updateScale()
-})
+const canvasContainer = document.getElementById('hero-canvas')
 
 var renderer = new THREE.WebGLRenderer({
-  canvas: document.getElementById('canvas'),
+  canvas: canvasContainer,
   antialias: true,
   alpha: true,
 })
 
 renderer.setPixelRatio(window.devicePixelRatio)
-renderer.setSize(window.innerWidth, window.innerHeight)
+renderer.setSize(canvasContainer.clientWidth, canvasContainer.clientHeight)
 
 var scene = new THREE.Scene()
 
@@ -73,7 +55,7 @@ const material1 = new THREE.MeshStandardMaterial({
 })
 
 const objloader = new OBJLoader()
-objloader.load('./model/maneki_neko.obj', (object) => {
+objloader.load('./models/maneki_neko.obj', (object) => {
   object.children[0].material = material1
   object.scale.setScalar(2.3)
   object.position.set(0, 0.2, 0)

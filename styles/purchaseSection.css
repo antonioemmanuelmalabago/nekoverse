@@ -1,0 +1,42 @@
+.buy-container {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  gap: 80px;
+}
+
+@media (max-width: 800px) {
+  .buy-container {
+    flex-direction: column;
+    padding: 20px 0;
+    height: 140vh;
+    min-height: 1050px;
+    gap: 40px;
+  }
+  .details-section {
+    display: flex;
+    flex-direction: column;
+    min-width: 60vw;
+    max-height: 360px;
+  }
+  .buy-section {
+    min-height: 550px;
+  }
+}
+
+@media (max-width: 620px) {
+  .buy-container {
+    max-height: 800px;
+    gap: 100px;
+  }
+  .details-section {
+    max-height: 320px;
+    min-width: 70%;
+  }
+  .buy-container .launch-placeholder {
+    display: none;
+  }
+}

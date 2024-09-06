@@ -1,16 +1,13 @@
 gsap.registerPlugin(ScrollTrigger)
 
-//===================================================== canvas
 const renderer2 = new THREE.WebGLRenderer({
-  canvas: document.getElementById('canvas2'),
+  canvas: document.getElementById('timeline-canvas'),
 })
 renderer2.setPixelRatio(window.devicePixelRatio)
 renderer2.setSize(window.innerWidth, window.innerHeight)
 
-//===================================================== scene
 var scene2 = new THREE.Scene()
 
-//===================================================== camera
 var camera2 = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
@@ -20,7 +17,6 @@ var camera2 = new THREE.PerspectiveCamera(
 camera2.position.z = 25
 camera2.position.y = 18
 
-//===================================================== lights
 var light1 = new THREE.DirectionalLight(0xefefff, 3)
 light1.position.set(1, 1, 1).normalize()
 scene2.add(light1)
@@ -29,7 +25,6 @@ var light2 = new THREE.DirectionalLight(0xffefef, 3)
 light2.position.set(-1, -1, -1).normalize()
 scene2.add(light2)
 
-//===================================================== resize
 window.addEventListener('resize', onWindowResize)
 
 function onWindowResize() {
@@ -40,11 +35,10 @@ function onWindowResize() {
   camera2.updateProjectionMatrix()
 }
 
-//===================================================== model
 var loader = new THREE.GLTFLoader()
 var mixer
 var model
-loader.load('./model/cat_rigged.glb', function (gltf) {
+loader.load('./models/cat_rigged.glb', function (gltf) {
   gltf.scene.traverse(function (node) {
     if (node instanceof THREE.Mesh) {
       node.castShadow = true
@@ -58,7 +52,6 @@ loader.load('./model/cat_rigged.glb', function (gltf) {
 
   mixer = new THREE.AnimationMixer(model)
   var action = mixer.clipAction(gltf.animations[0])
-  action.play()
 
   createAnimation(mixer, action, gltf.animations[0])
 })
@@ -84,7 +77,7 @@ function addStar() {
   scene2.add(star)
 }
 
-Array(2700).fill().forEach(addStar)
+Array(1000).fill().forEach(addStar)
 
 function createAnimation(mixer, action, clip) {
   let proxy = {
@@ -100,36 +93,19 @@ function createAnimation(mixer, action, clip) {
 
   let scrollingTL = gsap.timeline({
     scrollTrigger: {
-      trigger: '.timeline-container',
+      trigger: '.brandwrap-section',
       start: 'top top',
-      end: '800vh', // Adjust this end value as needed
-      pin: true,
-      pinSpacing: false, // Prevents additional space when pinned
+      end: '700vh', // Adjust this end value as needed
       scrub: true,
     },
   })
 
   scrollingTL.to(proxy, {
-    time: clip.duration * 1,
-    repeat: 4,
+    time: clip.duration,
+    repeat: 3,
   })
 
-  // Adjust the xPercent based on your design needs
-  scrollingTL.to(
-    '.phases',
-    {
-      xPercent: -100 * 2.5,
-      ease: 'none',
-      duration: 2,
-      scrollTrigger: {
-        trigger: '.timeline-container',
-        start: 'top top',
-        end: '800vh', // Use the same end value
-        scrub: true,
-      },
-    },
-    0
-  ) // Sync with the first timeline
+  action.play()
 }
 
 render()

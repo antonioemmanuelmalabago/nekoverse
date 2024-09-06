@@ -1,0 +1,14 @@
+@media (max-width: 500px) {
+  .wrapper.brand-wrapper {
+    height: 70px;
+  }
+  .brand-logo {
+    height: 100%;
+  }
+  .wrapper.partner-wrapper,
+  .wrapper.bottom-partner-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+}

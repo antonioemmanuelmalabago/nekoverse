@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,547 +7,544 @@
   </head>
 
   <body>
-    <div class="header-container" id="home">
-      <div class="logo-section">
-        <img src="./images/paw-icon.png" alt="" id="logo-image" />
-        <p id="logo-placeholder">NEKOVERSE</p>
-      </div>
-      <div class="menu-section">
-        <nav class="navigation-buttons">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#roadmap">Roadmap</a></li>
-            <li><a href="">Whitepaper</a></li>
-            <li><a id="buy-now-button" href="#buy">BUY $NEKO</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="expand-navigation-icon">
-        <a id="bars-icon" href="#" class="fa fa-bars"></a>
-        <a id="close-icon" href="#" class="fa fa-times"></a>
-      </div>
-
-      <div class="menu-section-column">
-        <nav class="navigation-buttons-column">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#roadmap">Roadmap</a></li>
-            <li><a href="">Whitepaper</a></li>
-            <li><a href="#buy">BUY $NEKO</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-
-    <div class="headline-container">
-      <div id="text-behind">NEKO<br />VERSE</div>
-      <div id="text-behind-blur">NEKO<br />VERSE</div>
-      <div id="text-front">NEKO<br />VERSE</div>
-    </div>
-
-    <div class="canvas-container">
-      <canvas id="canvas"></canvas>
-    </div>
-
-    <div class="text-container">
-      <div class="title">AMADEUS SOLUTIONS<br /><a href="">@AMADEUSHQ</a></div>
-      <div class="subtitle">EMBRACE THE FELINE CULTURE</div>
-      <div class="socials">
-        <a href="#" class="fab fa-facebook"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-youtube"></a>
-        <a href="#" class="fab fa-tiktok"></a>
-      </div>
-    </div>
-
-    <div class="features-container" id="about">
-      <div class="features">
-        <div class="feature-one">
-          <h1 id="feature-title">Purrfect Playgrounds</h1>
-          <p id="feature-description">
-            <b>Dive into a world of fun with our interactive games!</b>
-            Challenge yourself and others in cat-themed adventures, and earn
-            rewards along the way.
-          </p>
+    <div class="app">
+      <header class="header-wrapper">
+        <div class="logo-container">
           <img
-            src="./images/feature-one-img.png"
-            alt="Gamepad"
-            id="feature-one-img"
+            src="./images/paw-icon.png"
+            alt="Nekoverse Logo"
+            class="logo-image"
           />
+          <p class="logo-text">NEKOVERSE</p>
         </div>
-        <div class="feature-two">
-          <h1 id="feature-title">Neko Treasures</h1>
-          <p id="feature-description">
-            <b>Discover and collect unique, beautifully crafted Neko NFTs.</b>
-            Each one tells a story and adds a touch of feline magic to your
-            collection.
-          </p>
-          <img
-            src="./images/feature-two-img.png"
-            alt="Gamepad"
-            id="feature-two-img"
-          />
+        <div class="menu-container">
+          <nav class="nav-links">
+            <ul>
+              <li><a href="#home" id="home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#roadmap">Roadmap</a></li>
+              <li><a href="">Whitepaper</a></li>
+              <li><a href="#buy" class="buy-now-link">BUY $NEKO</a></li>
+            </ul>
+          </nav>
         </div>
-        <div class="feature-three">
-          <h1 id="feature-title">Catnip Celebrations</h1>
-          <p id="feature-description">
-            <b>Join the excitement with our community-driven events!</b>
-            Participate in contests, challenges, and special events that bring
-            cat lovers together.
-          </p>
-          <img
-            src="./images/feature-three-img.png"
-            alt="Gamepad"
-            id="feature-three-img"
-          />
+        <div class="nav-toggle-icons">
+          <a id="open-menu-icon" href="#" class="fa fa-bars"></a>
         </div>
-      </div>
-    </div>
 
-    <div class="canvas2-container" id="roadmap">
-      <canvas id="canvas2"></canvas>
-    </div>
+        <div class="mobile-menu">
+          <nav class="nav-links-mobile">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#roadmap">Roadmap</a></li>
+              <li><a href="">Whitepaper</a></li>
+              <li><a href="#buy">BUY $NEKO</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-    <div class="timeline-container">
-      <div class="phases">
-        <div class="phase-one">
-          <div class="header">
-            <p>CHAPTER 1</p>
-            <h1>Kitten Conception</h1>
+      <main>
+        <section class="hero-section">
+          <div class="company-name">
+            BLOCKCHAIN HQ<br /><a class="company-link" href="">@BLOCKSHQ</a>
           </div>
-          <div class="activities">
-            <div class="activity">
-              <a href="#" class="fa fa-lightbulb"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Conceptualize</h5>
-                  <p id="activity-subtitle">
-                    Define vision and features.
-                  </p></span
-                >
-              </div>
-            </div>
-            <div class="activity">
-              <a href="#" class="fa fa-search"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Research</h5>
-                  <p id="activity-subtitle">Conduct market research.</p></span
-                >
-              </div>
-            </div>
-            <div class="activity">
-              <a href="#" class="fa fa-users"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Recruit</h5>
-                  <p id="activity-subtitle">Form a skilled team.</p></span
-                >
-              </div>
-            </div>
-            <div class="activity">
-              <a href="#" class="fa fa-paint-brush"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Branding</h5>
-                  <p id="activity-subtitle">Create initial branding.</p></span
-                >
-              </div>
+          <div class="text-behind">NEKO<br />VERSE</div>
+          <div class="text-behind-blur">NEKO<br />VERSE</div>
+          <div class="text-front">NEKO<br />VERSE</div>
+          <div class="bottom-hero">
+            <div class="tag-phrase">EMBRACE THE FELINE CULTURE</div>
+            <div class="socials">
+              <a href="#" class="fab fa-facebook"></a>
+              <a href="#" class="fab fa-twitter"></a>
+              <a href="#" class="fab fa-instagram"></a>
+              <a href="#" class="fab fa-youtube"></a>
+              <a href="#" class="fab fa-tiktok"></a>
             </div>
           </div>
-        </div>
-        <div class="phase-two">
-          <div class="header">
-            <p>CHAPTER 2</p>
-            <h1>Paws-on Developer</h1>
-          </div>
-          <div class="activities">
-            <div class="activity">
-              <a href="#" class="fa fa-laptop-code"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Develop</h5>
-                  <p id="activity-subtitle">
-                    Build website and app interfaces.
-                  </p></span
-                >
-              </div>
-            </div>
-            <div class="activity">
-              <a href="#" class="fa fa-coins"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Mint</h5>
-                  <p id="activity-subtitle">Create initial Neko NFTs.</p></span
-                >
-              </div>
-            </div>
-            <div class="activity">
-              <a href="#" class="fa fa-gamepad"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Create</h5>
-                  <p id="activity-subtitle">Develop interactive games.</p></span
-                >
-              </div>
-            </div>
-            <div class="activity">
-              <a href="#" class="fa fa-bug"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Test</h5>
-                  <p id="activity-subtitle">
-                    Test platform and fix bugs.
-                  </p></span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="phase-three">
-          <div class="header">
-            <p>CHAPTER 3</p>
-            <h1>Whisker Launch</h1>
-          </div>
-          <div class="activities">
-            <div class="activity">
-              <a href="#" class="fa fa-rocket"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Launch</h5>
-                  <p id="activity-subtitle">
-                    Release Nekoverse platform.
-                  </p></span
-                >
-              </div>
-            </div>
-            <div class="activity">
-              <a href="#" class="fa fa-share-alt"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Distribute</h5>
-                  <p id="activity-subtitle">
-                    Conduct airdrop and list tokens.
-                  </p></span
-                >
-              </div>
-            </div>
-            <div class="activity">
-              <a href="#" class="fa fa-bullhorn"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Market</h5>
-                  <p id="activity-subtitle">Run marketing campaigns.</p></span
-                >
-              </div>
-            </div>
-            <div class="activity">
-              <a href="#" class="fa fa-headset"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Support</h5>
-                  <p id="activity-subtitle">Provide user support.</p></span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="phase-four">
-          <div class="header">
-            <p>CHAPTER 4</p>
-            <h1>Feline Expansion</h1>
-          </div>
-          <div class="activities">
-            <div class="activity">
-              <a href="#" class="fa fa-plus-circle"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Expand</h5>
-                  <p id="activity-subtitle">
-                    Release new games and NFTs.
-                  </p></span
-                >
-              </div>
-            </div>
-            <div class="activity">
-              <a href="#" class="fa fa-handshake"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Partner</h5>
-                  <p id="activity-subtitle">
-                    Form strategic partnerships.
-                  </p></span
-                >
-              </div>
-            </div>
-            <div class="activity">
-              <a href="#" class="fa fa-gift"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Reward</h5>
-                  <p id="activity-subtitle">Launch staking programs.</p></span
-                >
-              </div>
-            </div>
-            <div class="activity">
-              <a href="#" class="fa fa-globe"></a>
-              <div class="activity-description">
-                <span
-                  ><h5 id="activity-title">Promote</h5>
-                  <p id="activity-subtitle">Increase global marketing.</p></span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          <canvas id="hero-canvas"></canvas>
+        </section>
 
-    <div class="partners-container">
-      <div class="wrapper">
-        <div class="logoLeft logo1">
-          <img src="./images/mutliverx-logo.png" alt="" />
-        </div>
-        <div class="logoLeft logo2">
-          <img src="./images/morning-star-logo.png" alt="" />
-        </div>
-        <div class="logoLeft logo3">
-          <img src="./images/london-real-ventures-logo.png" alt="" />
-        </div>
-        <div class="logoLeft logo4">
-          <img src="./images/iverse-vision-logo.png" alt="" />
-        </div>
-        <div class="logoLeft logo5">
-          <img src="./images/swissborg-logo.png" alt="" />
-        </div>
-        <div class="logoLeft logo6">
-          <img src="./images/titan-stake-logo.png" alt="" />
-        </div>
-      </div>
-      <div class="wrapper">
-        <div class="logoRight logo1">
-          <img src="./images/xportal-logo.png" alt="" />
-        </div>
-        <div class="logoRight logo2">
-          <img src="./images/hatom-logo.png" alt="" />
-        </div>
-        <div class="logoRight logo3">
-          <img src="./images/entity-global-logo.png" alt="" />
-        </div>
-        <div class="logoRight logo4">
-          <img src="./images/xoxno-logo.png" alt="" />
-        </div>
-        <div class="logoRight logo5">
-          <img src="./images/itheum-logo.png" alt="" />
-        </div>
-        <div class="logoRight logo6">
-          <img src="./images/pyth-logo.png" alt="" />
-        </div>
-      </div>
-    </div>
-
-    <div class="buy-container" id="buy">
-      <div class="details-section">
-        <p id="launch-placeholder">
-          Launching on Decentralized Exchanges After the Presale
-        </p>
-        <p id="launch-title-placeholder">
-          <span id="title-no-gradient">Nekoverse:</span> Harnessing the Power of
-          the Feline Economy.
-        </p>
-        <p id="launch-subtitle-placeholder">
-          Nekoverse is an innovative platform that offers a unique universe of
-          feline fun through interactive games, NFTs, and community-driven
-          events.
-        </p>
-        <div class="launch-buttons">
-          <a href="">Whitepaper</a><a href="">Audit</a>
-        </div>
-      </div>
-      <div class="buy-section">
-        <p id="buy-header">COMMUNITY SALE ENDS IN</p>
-        <div class="timer">
-          <div class="days">
-            <h5 id="days-placeholder">Days</h5>
-            <h2 id="days-value">12</h2>
-          </div>
-          <div class="hours">
-            <h5 id="hours-placeholder">Hours</h5>
-            <h2 id="hours-value">04</h2>
-          </div>
-          <div class="minutes">
-            <h5 id="minutes-placeholder">Minutes</h5>
-            <h2 id="minutes-value">24</h2>
-          </div>
-          <div class="seconds">
-            <h5 id="seconds-placeholder">Seconds</h5>
-            <h2 id="seconds-value">37</h2>
-          </div>
-        </div>
-        <div class="total-raised">
-          <div class="cap-progress">
-            <p id="current-cap">$100,000,000</p>
-            <p id="cap-separator">/</p>
-            <p id="max-cap">$200,000,000</p>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-bar-filled"></div>
-          </div>
-          <p id="purchased-placeholder">YOUR PURCHASED $NEKO ~0</p>
-          <p id="stakeable-placeholder">YOUR STAKEABLE $NEKO ~0</p>
-        </div>
-        <div class="token-price">
-          <hr id="token-price-line-left" />
-          <p id="token-price">1 $NEKO = $0.05</p>
-          <hr id="token-price-line-right" />
-        </div>
-        <div class="currencies">
-          <button class="mvx-currency">
-            <div class="currency-icon-container mvx-container">
-              <img id="currency-icon" src="./images/mvx-icon.png" alt="" />
-            </div>
-            <p>EGLD</p>
-          </button>
-          <button class="usdt-currency">
-            <div class="currency-icon-container usdt-container">
-              <img id="currency-icon" src="./images/usdt-icon.png" alt="" />
-            </div>
-            <p>USDT</p>
-          </button>
-          <button class="usdc-currency">
-            <div class="currency-icon-container usdc-container">
-              <img id="currency-icon" src="./images/usdc-icon.png" alt="" />
-            </div>
-            <p>USDC</p>
-          </button>
-        </div>
-        <div class="purchase-input">
-          <div class="selected-currency">
-            <p id="purchase-placeholder">You pay</p>
-            <div class="selected-currency-box">
-              <input id="currency-value" type="number" placeholder="1.00" />
-              <div
-                class="currency-icon-container mvx-container"
-                id="selected-currency-icon"
-              >
+        <section class="'features-section">
+          <div class="features-container" id="about">
+            <div class="features">
+              <div class="feature-one">
+                <h1 class="feature-title">Purrfect Playgrounds</h1>
+                <p class="feature-description">
+                  <b>Dive into a world of fun with our interactive games!</b>
+                  Challenge yourself and others in cat-themed adventures, and
+                  earn rewards along the way.
+                </p>
                 <img
-                  id="currency-icon mvx-icon"
-                  src="./images/mvx-icon.png"
-                  alt=""
+                  src="./images/feature-one-img.png"
+                  alt="Gamepad"
+                  class="feature-one-img"
+                />
+              </div>
+              <div class="feature-two">
+                <h1 class="feature-title">Nekoverse Treasures</h1>
+                <p class="feature-description">
+                  <b
+                    >Discover and collect unique, beautifully crafted Neko
+                    NFTs.</b
+                  >
+                  Each one tells a story and adds a touch of feline magic to
+                  your collection.
+                </p>
+                <img
+                  src="./images/feature-two-img.png"
+                  alt="Gamepad"
+                  class="feature-two-img"
+                />
+              </div>
+              <div class="feature-three">
+                <h1 class="feature-title">Catnip Celebrations</h1>
+                <p class="feature-description">
+                  <b>Join the excitement with community-driven events!</b>
+                  Participate in contests, challenges, and special events that
+                  bring cat lovers together.
+                </p>
+                <img
+                  src="./images/feature-three-img.png"
+                  alt="Gamepad"
+                  class="feature-three-img"
                 />
               </div>
             </div>
           </div>
-          <div class="neko-equivalent">
-            <p id="purchase-placeholder">You receive</p>
+        </section>
 
-            <div class="neko-equivalent-box">
-              <input id="neko-value" type="number" placeholder="100000.00" />
-              <div
-                class="currency-icon-container mvx-container"
-                id="selected-currency-icon"
-              >
-                <img
-                  id="currency-icon mvx-icon"
-                  src="./images/paw-icon.png"
-                  alt=""
-                />
+        <section class="brandwrap-section">
+          <div class="wrapper brand-wrapper">
+            <div class="logoRight logo1 brand-logo">
+              <div class="logo-container">
+                <img src="./images/paw-icon.png" alt="" class="logo-image" />
+                <p class="logo-text">NEKOVERSE</p>
+              </div>
+            </div>
+            <div class="logoRight logo2 brand-logo">
+              <div class="logo-container">
+                <img src="./images/paw-icon.png" alt="" class="logo-image" />
+                <p class="logo-text">NEKOVERSE</p>
+              </div>
+            </div>
+            <div class="logoRight logo3 brand-logo">
+              <div class="logo-container">
+                <img src="./images/paw-icon.png" alt="" class="logo-image" />
+                <p class="logo-text">NEKOVERSE</p>
+              </div>
+            </div>
+            <div class="logoRight logo4 brand-logo">
+              <div class="logo-container">
+                <img src="./images/paw-icon.png" alt="" class="logo-image" />
+                <p class="logo-text">NEKOVERSE</p>
+              </div>
+            </div>
+            <div class="logoRight logo5 brand-logo">
+              <div class="logo-container">
+                <img src="./images/paw-icon.png" alt="" class="logo-image" />
+                <p class="logo-text">NEKOVERSE</p>
+              </div>
+            </div>
+            <div class="logoRight logo6 brand-logo">
+              <div class="logo-container">
+                <img src="./images/paw-icon.png" alt="" class="logo-image" />
+                <p class="logo-text">NEKOVERSE</p>
               </div>
             </div>
           </div>
-        </div>
-        <button class="connect-wallet-button">
-          <p id="connect-wallet-placeholder">Connect Wallet</p>
-        </button>
-      </div>
-    </div>
+        </section>
 
-    <div class="footer-container">
-      <div class="wrapper brand-wrapper">
-        <div class="logoRight logo1">
-          <div class="logo-section">
-            <img src="./images/paw-icon.png" alt="" id="logo-image" />
-            <p id="logo-placeholder">NEKOVERSE</p>
+        <section class="timeline-section">
+          <div class="phases" id="roadmap">
+            <div class="phase-one">
+              <div class="phase-title">
+                <p>CHAPTER 1</p>
+                <h1>Kitten Conception</h1>
+              </div>
+              <div class="activities">
+                <div class="activity">
+                  <a href="#" class="fa fa-lightbulb"></a>
+                  <div class="activity-description">
+                    <span
+                      ><h5 class="activity-title">Conceptualize</h5>
+                      <p class="activity-subtitle">
+                        Define vision and features.
+                      </p></span
+                    >
+                  </div>
+                </div>
+                <div class="activity">
+                  <a href="#" class="fa fa-search"></a>
+                  <div class="activity-description">
+                    <span
+                      ><h5 class="activity-title">Research</h5>
+                      <p class="activity-subtitle">
+                        Conduct market research.
+                      </p></span
+                    >
+                  </div>
+                </div>
+                <div class="activity">
+                  <a href="#" class="fa fa-users"></a>
+                  <div class="activity-description">
+                    <span
+                      ><h5 class="activity-title">Recruit</h5>
+                      <p class="activity-subtitle">
+                        Form a skilled team.
+                      </p></span
+                    >
+                  </div>
+                </div>
+                <div class="activity">
+                  <a href="#" class="fa fa-paint-brush"></a>
+                  <div class="activity-description">
+                    <span
+                      ><h5 class="activity-title">Branding</h5>
+                      <p class="activity-subtitle">
+                        Create initial branding.
+                      </p></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="phase-two">
+              <div class="phase-title">
+                <p>CHAPTER 2</p>
+                <h1>Paws-on Developer</h1>
+              </div>
+              <div class="activities">
+                <div class="activity">
+                  <a href="#" class="fa fa-laptop-code"></a>
+                  <div class="activity-description">
+                    <span
+                      ><h5 class="activity-title">Develop</h5>
+                      <p class="activity-subtitle">
+                        Build website and app interfaces.
+                      </p></span
+                    >
+                  </div>
+                </div>
+                <div class="activity">
+                  <a href="#" class="fa fa-coins"></a>
+                  <div class="activity-description">
+                    <span
+                      ><h5 class="activity-title">Mint</h5>
+                      <p class="activity-subtitle">
+                        Create initial Neko NFTs.
+                      </p></span
+                    >
+                  </div>
+                </div>
+                <div class="activity">
+                  <a href="#" class="fa fa-gamepad"></a>
+                  <div class="activity-description">
+                    <span
+                      ><h5 class="activity-title">Create</h5>
+                      <p class="activity-subtitle">
+                        Develop interactive games.
+                      </p></span
+                    >
+                  </div>
+                </div>
+                <div class="activity">
+                  <a href="#" class="fa fa-bug"></a>
+                  <div class="activity-description">
+                    <span
+                      ><h5 class="activity-title">Test</h5>
+                      <p class="activity-subtitle">
+                        Test platform and fix bugs.
+                      </p></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="phase-three">
+              <div class="phase-title">
+                <p>CHAPTER 3</p>
+                <h1>Feline Domination</h1>
+              </div>
+              <div class="activities">
+                <div class="activity">
+                  <a href="#" class="fa fa-plus-circle"></a>
+                  <div class="activity-description">
+                    <span
+                      ><h5 class="activity-title">Expand</h5>
+                      <p class="activity-subtitle">
+                        Release new games and NFTs.
+                      </p></span
+                    >
+                  </div>
+                </div>
+                <div class="activity">
+                  <a href="#" class="fa fa-handshake"></a>
+                  <div class="activity-description">
+                    <span
+                      ><h5 class="activity-title">Partner</h5>
+                      <p class="activity-subtitle">
+                        Form strategic partnerships.
+                      </p></span
+                    >
+                  </div>
+                </div>
+                <div class="activity">
+                  <a href="#" class="fa fa-gift"></a>
+                  <div class="activity-description">
+                    <span
+                      ><h5 class="activity-title">Reward</h5>
+                      <p class="activity-subtitle">
+                        Launch staking programs.
+                      </p></span
+                    >
+                  </div>
+                </div>
+                <div class="activity">
+                  <a href="#" class="fa fa-globe"></a>
+                  <div class="activity-description">
+                    <span
+                      ><h5 class="activity-title">Promote</h5>
+                      <p class="activity-subtitle">
+                        Increase global marketing.
+                      </p></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="logoRight logo2">
-          <div class="logo-section">
-            <img src="./images/paw-icon.png" alt="" id="logo-image" />
-            <p id="logo-placeholder">NEKOVERSE</p>
+          <canvas id="timeline-canvas"></canvas>
+        </section>
+
+        <section class="partners-section">
+          <div class="partners-container">
+            <div class="wrapper partner-wrapper">
+              <div class="logoLeft logo1 partner-logo">
+                <img src="./images/mutliverx-logo.png" alt="" />
+              </div>
+              <div class="logoLeft logo2 partner-logo">
+                <img src="./images/morning-star-logo.png" alt="" />
+              </div>
+              <div class="logoLeft logo3 partner-logo">
+                <img src="./images/london-real-ventures-logo.png" alt="" />
+              </div>
+              <div class="logoLeft logo4 partner-logo">
+                <img src="./images/iverse-vision-logo.png" alt="" />
+              </div>
+              <div class="logoLeft logo5 partner-logo">
+                <img src="./images/swissborg-logo.png" alt="" />
+              </div>
+              <div class="logoLeft logo6 partner-logo">
+                <img src="./images/titan-stake-logo.png" alt="" />
+              </div>
+            </div>
+            <div class="wrapper bottom-partner-wrapper">
+              <div class="logoRight logo1 partner-logo">
+                <img src="./images/xportal-logo.png" alt="" />
+              </div>
+              <div class="logoRight logo2 partner-logo">
+                <img src="./images/hatom-logo.png" alt="" />
+              </div>
+              <div class="logoRight logo3 partner-logo">
+                <img src="./images/entity-global-logo.png" alt="" />
+              </div>
+              <div class="logoRight logo4 partner-logo">
+                <img src="./images/xoxno-logo.png" alt="" />
+              </div>
+              <div class="logoRight logo5 partner-logo">
+                <img src="./images/itheum-logo.png" alt="" />
+              </div>
+              <div class="logoRight logo6 partner-logo">
+                <img src="./images/pyth-logo.png" alt="" />
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="logoRight logo3">
-          <div class="logo-section">
-            <img src="./images/paw-icon.png" alt="" id="logo-image" />
-            <p id="logo-placeholder">NEKOVERSE</p>
+        </section>
+
+        <section class="purchase-section">
+          <div class="buy-container" id="buy">
+            <div class="details-section">
+              <p class="launch-placeholder">
+                Launching on Decentralized Exchanges After the Presale
+              </p>
+              <p class="launch-title-placeholder">
+                <span class="title-no-gradient">Nekoverse:</span> Harnessing the
+                Power of the Feline Economy.
+              </p>
+              <p class="launch-subtitle-placeholder">
+                Nekoverse is an innovative platform that offers a unique
+                universe of feline fun through interactive games, NFTs, and
+                community-driven events.
+              </p>
+              <div class="launch-buttons">
+                <a href="">Whitepaper</a><a href="">Audit</a>
+              </div>
+            </div>
+            <div class="buy-section">
+              <p class="buy-header">COMMUNITY SALE ENDS IN</p>
+              <div class="timer">
+                <div class="days">
+                  <h5>Days</h5>
+                  <h2>12</h2>
+                </div>
+                <div class="hours">
+                  <h5>Hours</h5>
+                  <h2>04</h2>
+                </div>
+                <div class="minutes">
+                  <h5>Minutes</h5>
+                  <h2>24</h2>
+                </div>
+                <div class="seconds">
+                  <h5>Seconds</h5>
+                  <h2>37</h2>
+                </div>
+              </div>
+              <div class="total-raised">
+                <div class="cap-progress">
+                  <p class="current-cap">$100,000,000</p>
+                  <p class="cap-separator">/</p>
+                  <p class="max-cap">$200,000,000</p>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-bar-filled"></div>
+                </div>
+                <p class="purchased-placeholder">Your purchased $NEKO ~0</p>
+                <p class="stakeable-placeholder">Your stakeable $NEKO ~0</p>
+              </div>
+              <div class="token-price">
+                <hr class="token-price-line-left" />
+                <p class="token-value">1 $NEKO = $0.05</p>
+                <hr class="token-price-line-right" />
+              </div>
+              <div class="currencies">
+                <button class="mvx-currency">
+                  <div class="currency-icon-container mvx-container">
+                    <img src="./images/mvx-icon.png" alt="" />
+                  </div>
+                  <p>EGLD</p>
+                </button>
+                <button class="usdt-currency">
+                  <div class="currency-icon-container usdt-container">
+                    <img src="./images/usdt-icon.png" alt="" />
+                  </div>
+                  <p>USDT</p>
+                </button>
+                <button class="usdc-currency">
+                  <div class="currency-icon-container usdc-container">
+                    <img src="./images/usdc-icon.png" alt="" />
+                  </div>
+                  <p>USDC</p>
+                </button>
+              </div>
+              <div class="purchase-input">
+                <div class="selected-currency">
+                  <p class="purchase-placeholder">You pay</p>
+                  <div class="selected-currency-box">
+                    <input
+                      class="currency-value"
+                      type="number"
+                      placeholder="1.00"
+                    />
+                    <div class="currency-icon-container selected-currency-icon">
+                      <img
+                        class="currency-icon mvx-icon"
+                        src="./images/mvx-icon.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="neko-equivalent">
+                  <p class="purchase-placeholder">You receive</p>
+
+                  <div class="neko-equivalent-box">
+                    <input
+                      class="neko-value"
+                      type="number"
+                      placeholder="100000.00"
+                    />
+                    <div class="currency-icon-container selected-currency-icon">
+                      <img
+                        class="currency-icon mvx-icon"
+                        src="./images/paw-icon.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="connect-wallet-button">
+                <p class="connect-wallet-placeholder">Connect Wallet</p>
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="logoRight logo4">
-          <div class="logo-section">
-            <img src="./images/paw-icon.png" alt="" id="logo-image" />
-            <p id="logo-placeholder">NEKOVERSE</p>
+        </section>
+
+        <footer>
+          <div class="footer-container">
+            <div class="footer-section">
+              <div class="footer-column-one">
+                <p class="logo-text">NEKOVERSE</p>
+                <p class="footer-text">
+                  Aurora Boulevard cor. Katipunan Avenue, Loyola Heights Quezon
+                  City, Philippines 1108
+                </p>
+                <p class="footer-text">neoverse@gmail.com</p>
+                <p class="footer-text">(123) 456-7890</p>
+              </div>
+              <div class="footer-column-two">
+                <p class="logo-text">Socials</p>
+                <div class="footer-links">
+                  <a class="footer-link" href="">Facebook</a>
+                  <a class="footer-link" href="">Twitter</a>
+                  <a class="footer-link" href="">Instagram</a>
+                  <a class="footer-link" href="">Youtube</a>
+                  <a class="footer-link" href="">Tiktok</a>
+                </div>
+              </div>
+              <div class="footer-column-three">
+                <p class="copyright-placeholder">
+                  &copy; 2024 Nekoverse. All Rights Reserved.
+                </p>
+                <div class="footer-links">
+                  <a class="footer-link" href="">Terms of Use</a>
+                  <a class="footer-link" href="">Privacy Policy</a>
+                  <a class="footer-link" href="">Sitemap</a>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="logoRight logo5">
-          <div class="logo-section">
-            <img src="./images/paw-icon.png" alt="" id="logo-image" />
-            <p id="logo-placeholder">NEKOVERSE</p>
-          </div>
-        </div>
-        <div class="logoRight logo6">
-          <div class="logo-section">
-            <img src="./images/paw-icon.png" alt="" id="logo-image" />
-            <p id="logo-placeholder">NEKOVERSE</p>
-          </div>
-        </div>
-      </div>
-      <div class="footer-section">
-        <div class="footer-column-one">
-          <p id="logo-placeholder">NEKOVERSE</p>
-          <p id="footer-text">
-            Aurora Boulevard cor. Katipunan Avenue, Loyola Heights Quezon City,
-            Philippines 1108
-          </p>
-          <p id="footer-text">neoverse@gmail.com</p>
-          <p id="footer-text">(123) 456-7890</p>
-        </div>
-        <div class="footer-column-two">
-          <p id="social-placeholder">Socials</p>
-          <div class="footer-links">
-            <a id="footer-link" href="">Facebook</a>
-            <a id="footer-link" href="">Twitter</a>
-            <a id="footer-link" href="">Instagram</a>
-            <a id="footer-link" href="">Youtube</a>
-            <a id="footer-link" href="">Tiktok</a>
-          </div>
-        </div>
-        <div class="footer-column-three">
-          <p id="copyright-placeholder">
-            &copy; 2024 Nekoverse. All Rights Reserved.
-          </p>
-          <div class="footer-links">
-            <a id="footer-link" href="">Terms of Use</a>
-            <a id="footer-link" href="">Privacy Policy</a>
-            <a id="footer-link" href="">Sitemap</a>
-          </div>
-        </div>
-      </div>
+        </footer>
+      </main>
     </div>
   </body>
-  <link rel="stylesheet" href="./styles.css" />
-  <link rel="stylesheet" href="./marque.css" />
-  <script type="module" src="./headline.js"></script>
-  <script type="module" src="./navigation.js"></script>
-  <script type="module" src="./timeline.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
-  <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./styles/animations.css" />
+  <link rel="stylesheet" href="./styles/navigationBar.css" />
+  <link rel="stylesheet" href="./styles/mobileMenu.css" />
+  <link rel="stylesheet" href="./styles/heroSection.css" />
+  <link rel="stylesheet" href="./styles/featuresSection.css" />
+  <link rel="stylesheet" href="./styles/timelineSection.css" />
+  <link rel="stylesheet" href="./styles/purchaseSection.css" />
+  <link rel="stylesheet" href="./styles/timelineSection.css" />
+  <link rel="stylesheet" href="./styles/detailsSection.css" />
+  <link rel="stylesheet" href="./styles/buySection.css" />
+  <link rel="stylesheet" href="./styles/marqueeEffect.css" />
+  <link rel="stylesheet" href="./styles/partnersSection.css" />
+  <link rel="stylesheet" href="./styles/brandwrapSection.css" />
+  <link rel="stylesheet" href="./styles/footerSection.css" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
   />
+  <script type="module" src="./utils/navigationBar.js"></script>
+  <script type="module" src="./utils/heroCanvas.js"></script>
+  <script type="module" src="./utils/timelineCanvas.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 </html>

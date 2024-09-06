@@ -1,0 +1,86 @@
+.hero-section {
+  position: relative;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  text-align: center;
+  gap: 500px;
+  overflow: hidden;
+}
+
+#hero-canvas {
+  position: absolute;
+  top: -5;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.text-behind,
+.text-behind-blur,
+.text-front {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(25px, 25vw, 200px);
+  font-weight: 800;
+  letter-spacing: 5px;
+  line-height: 0.8;
+  position: absolute;
+  top: 28vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.text-behind {
+  color: var(--headline-color);
+  z-index: 1;
+}
+
+.text-behind-blur {
+  color: var(--text-color);
+  filter: blur(7px);
+  -webkit-filter: blur(7.5px);
+  z-index: 0;
+}
+
+.text-front {
+  color: transparent;
+  -webkit-text-stroke: 3px var(--text-color);
+  z-index: 3;
+}
+
+.company-name,
+.bottom-hero {
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  font-weight: 500;
+}
+
+.company-link {
+  text-decoration: none;
+  color: var(--nav-links-color);
+}
+
+.socials a {
+  margin: 0 8px;
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.5);
+  text-decoration: none;
+  padding-top: 10px;
+  color: var(--nav-links-color);
+  z-index: 4;
+}
+
+.company-name a:hover,
+.socials a:hover {
+  transform: scale(2);
+  color: white;
+  filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
+}

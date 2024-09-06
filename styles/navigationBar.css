@@ -1,0 +1,77 @@
+.header-wrapper {
+  height: 10vh;
+  width: 100vw;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  width: 50%;
+}
+
+.logo-image {
+  width: 30px;
+  height: auto;
+  margin-left: 30px;
+  filter: invert(100);
+}
+
+.logo-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: right;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.nav-links li {
+  margin-right: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--nav-links-color);
+}
+
+.nav-links a:hover {
+  color: var(--text-color);
+  text-shadow: 0 0 2px var(--text-color);
+}
+
+.buy-now-link {
+  font-weight: bold;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.buy-now-link:hover {
+  border: 2px solid white;
+  background: linear-gradient(90deg, #ff674d, #c74b9b, #3c5bcc);
+}
+
+@media (max-width: 800px) {
+  .menu-container {
+    display: none;
+  }
+}
