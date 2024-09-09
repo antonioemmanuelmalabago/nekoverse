@@ -5,16 +5,20 @@ import { OBJLoader } from 'https://cdn.skypack.dev/three@0.134.0/examples/jsm/lo
 let theta1 = 0
 const canvasContainer = document.getElementById('hero-canvas')
 
-var renderer = new THREE.WebGLRenderer({
+const renderer = new THREE.WebGLRenderer({
   canvas: canvasContainer,
   antialias: true,
   alpha: true,
 })
 
-renderer.setPixelRatio(window.devicePixelRatio)
-renderer.setSize(canvasContainer.clientWidth, canvasContainer.clientHeight)
+function setRendererSize() {
+  renderer.setSize(canvasContainer.clientWidth, canvasContainer.clientHeight)
+}
 
-var scene = new THREE.Scene()
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+setRendererSize()
+
+const scene = new THREE.Scene()
 
 const hdrEquirect = new RGBELoader()
   .setPath(
@@ -27,7 +31,7 @@ const hdrEquirect = new RGBELoader()
 scene.environment = hdrEquirect
 scene.fog = new THREE.FogExp2(0x11151c, 0.15)
 
-var group = new THREE.Group()
+const group = new THREE.Group()
 scene.add(group)
 
 const pointlight = new THREE.PointLight(0x85ccb8, 7.5, 10)
@@ -38,9 +42,9 @@ const pointlight2 = new THREE.PointLight(0x9f85cc, 7.5, 10)
 pointlight2.position.set(0, 1, 0)
 group.add(pointlight2)
 
-var camera = new THREE.PerspectiveCamera(
+const camera = new THREE.PerspectiveCamera(
   45,
-  window.innerWidth / window.innerHeight,
+  canvasContainer.clientWidth / canvasContainer.clientHeight,
   0.1,
   1000
 )
@@ -62,9 +66,15 @@ objloader.load('./models/maneki_neko.obj', (object) => {
   group.add(object)
 })
 
-window.addEventListener('resize', onWindowResize)
+let animationFrameId
 
-var update = function () {
+function onWindowResize() {
+  camera.aspect = canvasContainer.clientWidth / canvasContainer.clientHeight
+  camera.updateProjectionMatrix()
+  setRendererSize()
+}
+
+function update() {
   theta1 += 0.0025
   camera.position.x = Math.sin(theta1) * 10
   camera.position.z = Math.cos(theta1) * 10
@@ -82,16 +92,32 @@ var update = function () {
   camera.lookAt(0, 0, 0)
 }
 
-function onWindowResize() {
-  camera.aspect = canvasContainer.innerWidth / canvasContainer.innerHeight
-  camera.updateProjectionMatrix()
-  renderer.setSize(canvasContainer.innerWidth, canvasContainer.innerHeight)
-}
-
 function animate() {
   update()
   renderer.render(scene, camera)
-  requestAnimationFrame(animate)
+  animationFrameId = requestAnimationFrame(animate)
 }
 
-requestAnimationFrame(animate)
+function startAnimation() {
+  if (!animationFrameId) {
+    animate()
+  }
+}
+
+function stopAnimation() {
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId)
+    animationFrameId = null
+  }
+}
+
+window.addEventListener('resize', onWindowResize)
+window.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    stopAnimation()
+  } else {
+    startAnimation()
+  }
+})
+
+startAnimation()
