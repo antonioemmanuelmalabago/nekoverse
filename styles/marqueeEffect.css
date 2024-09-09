@@ -17,6 +17,7 @@
 .brand-wrapper {
   width: 100%;
   background-color: black;
+  mask-image: none;
   margin: 0;
 }
 
