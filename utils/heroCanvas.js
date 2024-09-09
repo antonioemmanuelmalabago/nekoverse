@@ -83,9 +83,9 @@ var update = function () {
 }
 
 function onWindowResize() {
-  camera.aspect = window.innerWidth / window.innerHeight
+  camera.aspect = canvasContainer.innerWidth / canvasContainer.innerHeight
   camera.updateProjectionMatrix()
-  renderer.setSize(window.innerWidth, window.innerHeight)
+  renderer.setSize(canvasContainer.innerWidth, canvasContainer.innerHeight)
 }
 
 function animate() {
