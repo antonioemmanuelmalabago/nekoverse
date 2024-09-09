@@ -51,6 +51,7 @@
 .nav-links a {
   text-decoration: none;
   color: var(--nav-links-color);
+  cursor: pointer;
 }
 
 .nav-links a:hover {
