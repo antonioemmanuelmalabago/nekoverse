@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const barsIcon = document.getElementById('open-menu-icon')
   const mobileMenu = document.querySelector('.mobile-menu')
-  const homeButton = document.getElementById('home')
+  const homeButton = document.querySelectorAll('#home')
 
   barsIcon.addEventListener('click', function (event) {
     event.preventDefault()
