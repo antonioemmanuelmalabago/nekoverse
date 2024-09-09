@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
   const barsIcon = document.getElementById('open-menu-icon')
   const mobileMenu = document.querySelector('.mobile-menu')
-  const homeButton = document.querySelectorAll('#home')
+  const homeButton = document.getElementById('#home')
+  const mobileHomeButton = document.getElementById('#mobile-home')
 
   barsIcon.addEventListener('click', function (event) {
     event.preventDefault()
@@ -15,6 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   homeButton.addEventListener('click', function (event) {
+    event.preventDefault()
+
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  })
+
+  mobileHomeButton.addEventListener('click', function (event) {
     event.preventDefault()
 
     window.scrollTo({ top: 0, behavior: 'smooth' })
